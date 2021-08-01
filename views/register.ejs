@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Sign Up</title>
+
+    <!-- Font Icon -->
+    <link rel="stylesheet" href="fonts/material-icon/css/material-design-iconic-font.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link href="https://yui.yahooapis.com/pure/0.5.0/pure-min.css" rel="stylesheet">
+    <!-- Main css -->
+    <link rel="stylesheet" href="/css/sign.css">
+</head>
+<body>
+
+    <div class="main">
+
+        <!-- Sign up form -->
+        <section class="signup">
+            <div class="container">
+                <div class="signup-content">
+                    <div class="signup-form">
+                        <h2 class="form-title">Sign up</h2>
+                        <form action="/register" method="POST" class="register-form" id="register-form">
+                            <div class="form-group">
+                                <label for="name"><i class="ri-user-fill"></i></label>
+                                <input type="text" name="name" id="name" placeholder="Your Name" required/>
+                            </div>
+                            <div class="form-group">
+                                <label for="email"><i class="ri-mail-fill"></i></label>
+                                <input type="email" name="email" id="email" placeholder="Your Email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="pass"><i class="ri-lock-2-fill"></i></label>
+                                <input type="password" name="pass" id="pass" placeholder="Password" required/>
+                            </div>
+                            <div class="form-group">
+                                <label for="repass"><i class="ri-lock-2-fill"></i></label>
+                                <input type="password" name="repass" id="repass" placeholder="Repeat your password" required/>
+                            </div>
+                            
+                            <div class="form-group form-button">
+                                <button type="submit" class=" form-submit btn btn-primary" name="signup" id="signup">Sign up</button>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="signup-image">
+                        <figure><img src='https://i.postimg.cc/mkqVmbT9/img3.png' border='0' alt='img3'/></figure>
+                        <a href="/login" class="signup-image-link">I am already member</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+      </div>
+      <script>
+    var password = document.getElementById("pass")
+  , confirm_password = document.getElementById("repass");
+       console.log(password);
+    console.log(confirm_password);
+    
+function validatePassword(){
+  if(password.value != confirm_password.value) {
+    confirm_password.setCustomValidity("Passwords Don't Match");
+  } else {
+    confirm_password.setCustomValidity('');
+  }
+}
+
+password.onchange = validatePassword;
+confirm_password.onkeyup = validatePassword;
+    </script>
+
+      <script src="vendor/jquery/jquery.min.js"></script>
+      <script src="js/main.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+      </body>
+      </html>

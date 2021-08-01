@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>Appointment</title>
+
+    <!-- Bootstrap CSS CDN -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+    <!-- Our Custom CSS -->
+    <link rel="stylesheet" href="/css/app.css">
+
+    <!-- Font Awesome JS -->
+    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js" integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ" crossorigin="anonymous"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js" integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="wrapper">
+        <!-- Sidebar  -->
+        <nav id="sidebar">
+            <div class="sidebar-header">
+                <h3><a href="/"></a> Doc Consultance</h3>
+            </div>
+
+            <ul class="list-unstyled components">
+                </li>
+                <li>
+                    <a href="#">Book appointment</a>
+                </li>
+                <li>
+                    <a href="/viewappointment">View appointment</a>
+                </li>
+                <li>
+                    <a href="/viewappointment">Cancel booking</a>
+                </li>
+                <li>
+                    <a href="/doctors">View doctors nearby</a>
+                </li>
+                <li>
+                    <a href="/">Logout</a>
+                </li>
+            </ul>
+
+        </nav>
+
+        <!-- Page Content  -->
+        <div id="content">
+
+        <!-- green nav -->
+            <nav class="navbar navbar-expand-lg navbar-light " style="background-color:rgba(10,150,108); ">
+                <div class="container-fluid">
+                    <button type="button" id="sidebarCollapse" class="btn btn-info tog">
+                        <i class="fas fa-align-left"></i>
+                        <!-- <span>Toggle Sidebar</span> -->
+                    </button>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav">
+                          <li class="nav-item ">
+                            <a class="nav-link" href="/doctors">Search nearby doctors</a>
+                          </li>
+                          <li class="nav-item active">
+                            <a class="nav-link " href="/appointment">Book appointment</a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link" href="https://console.dialogflow.com/api-client/demo/embedded/9883019c-1150-4d8b-82a1-fdfab6ec486d">Chat with bot</a>
+                          </li>
+                          <!-- <button type="button" class="btn btn-light navbtn-sign">Log out</button> -->
+                          <a class="btn btn-light navbtn-sign" href="/" role="button">Logout</a>
+                          <!-- <button type="button" class="btn btn-outline-light navbtn-log">Log in</button> -->
+                        </ul>
+                      </div>
+                </div>
+            </nav>
+
+
+
+            <div class="container">
+                <div class="row">
+                    <div class = "col-9 form">
+                        <div class="head">
+                            <h2>New Appointment</h2>
+                        </div>
+                        <form class="formapp" action="/appointment" method="post">
+
+                        <div class="form-group row">
+                            <label class="col-form-label col-sm-2">Doctor ID</label>
+                            <!-- <h2><%= newListItems.doctorID %></h2> -->
+                            <input class="form-control col-sm-4" type="text" name="docId" placeholder="Enter your preferred doctor's ID">
+                              <!-- &nbsp &nbsp &nbsp &nbsp&nbsp &nbsp &nbsp<a href="#">Search from list.</a> -->
+                        </div>
+
+                        <div class="form-group row">
+                            <label  class="col-form-label col-sm-2">Patient's Name</label>
+                            <input class="form-control col-sm-4" name="pName" type="text" placeholder="Enter Name" >
+                        </div>
+                        <div class="form-group row">
+                            <label  class="col-form-label col-sm-2">Patient's Email</label>
+                            <input class="form-control col-sm-4" name="email" type="email" placeholder="Enter Email" >
+                        </div>
+
+                        <div class="form-group row">
+                            <label  class="col-form-label col-sm-2">Contact No.</label>
+                            <input class="form-control col-sm-4" name="contact" type="number" placeholder="Enter Mobile Number" >
+                        </div>
+
+                        <div class="form-group row">
+                            <label  class="col-form-label col-sm-2">Date</label>
+                            <input class="form-control col-sm-4" name="date" type="date">
+                        </div>
+
+                        <div class="form-group row">
+                            <label  class="col-form-label col-sm-2">Time</label>
+                            <input class="form-control col-sm-4" name="time" type="time">
+                        </div>
+                        <button type="submit" class ="btn btn-success" onclick="booked()" id="check">Book Now</button>
+                      </form>
+                    </div>
+                    <div class="col-3">
+                        <img src="https://i.postimg.cc/mgrvHKZx/appointment-booking-with-calendar-doctor-23-2148565452.jpg" class="animage" alt="">
+
+                    </div>
+                </div>
+                </div>
+            </div>
+
+
+    </div>
+     <!-- footer -->
+  <div class=" pt-5 pb-5 footer">
+    <div class="container ">
+      <div class="row">
+        <div class="col-lg-5 col-xs-12 about-company">
+          <h2>DocConsultance</h2>
+          </h2>
+          <p class="pr-5 text-white-50">One place for your consultance</p>
+        </div>
+        <div class="col-lg-3 col-xs-12 links">
+          <h4 class="mt-lg-0 mt-sm-3">Quick Links</h4>
+          <ul class="m-0 p-0">
+            <li> <a href="#" style="color: white ;">Join as doctor</a></li>
+            <li> <a href="#" style="color: white ;">View nearby doctors</a></li>
+            <li> <a href="#" style="color: white ;">Frequently asked questions</a></li>
+            <li> <a href="#" style="color: white ;">Contact us</a></li>
+            <li> <a href="#" style="color: white ;">About us</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-4 col-xs-12 location">
+          <h4 class="mt-lg-0 mt-sm-4">Location</h4>
+          <p>22, Lorem ipsum dolor, consectetur adipiscing</p>
+          <p class="mb-0">(541) 754-3010</p>
+          <p>info@hsdf.com</p>
+        </div>
+      </div>
+      <div class="row mt-5">
+        <div class="col copyright">
+          <p class=""><small class="text-white-50">© 2020. All Rights Reserved.</small></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+    <!-- jQuery CDN - Slim version (=without AJAX) -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <!-- Popper.JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+
+    <script type="text/javascript">
+    function booked(){
+      alert("Appointment Booked Successfully!");
+    }
+        $(document).ready(function () {
+            $('#sidebarCollapse').on('click', function () {
+                $('#sidebar').toggleClass('active');
+            });
+        });
+    </script>
+</body>
+
+</html>

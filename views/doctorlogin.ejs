@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Sign In </title>
+
+    <!-- Font Icon -->
+    <link rel="stylesheet" href="fonts/material-icon/css/material-design-iconic-font.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+
+    <!-- Main css -->
+    <link rel="stylesheet" href="/css/sign.css">
+</head>
+<body>
+
+    <div class="main">
+
+      <section class="sign-in">
+          <div class="container">
+              <div class="signin-content">
+                  <div class="signin-image">
+                    <figure><img src="/images/dr-login.jpg" border='0' alt='img3'/></figure>
+                      <!-- <figure><img src='https://image.freepik.com/free-vector/doctor-character-background_1270-84.jpg' border='0' alt='img3'/></figure> -->
+
+                      <a href="mailto: abc@example.com" class="signup-image-link">Join as doctor</a>
+                  </div>
+
+                  <div class="signin-form">
+                      <h2 class="form-title">Log in as Doctor</h2>
+                      <form action="/doctorlogin" method="POST" class="register-form" id="login-form">
+                          <div class="form-group">
+                              <label for="id"><i class="ri-mail-fill"></i></label>
+                              <input type="text" name="doctorID" id="id" placeholder="Doctor ID" required/>
+                          </div>
+                          <div class="form-group">
+                              <label for="password"><i class="ri-lock-2-fill"></i></label>
+                              <input type="password" name="password" id="password" placeholder="Password" required/>
+                          </div>
+
+
+                          <div class="form-group form-button">
+                              <input type="submit" name="login" id="signin" class="form-submit" value="Log in"/>
+                          </div>
+                      </form>
+
+                  </div>
+              </div>
+          </div>
+      </section>
+      </div>
+
+      <script src="vendor/jquery/jquery.min.js"></script>
+      <script src="js/main.js"></script>
+      </body>
+      </html>

@@ -1,0 +1,87 @@
+body{
+  font-family: 'Manrope', sans-serif !important;
+}
+
+.navbar-light .navbar-brand{
+  color: #fff;
+
+}
+.navbar-brand{
+  margin-left: 1em;
+}
+.nav-item{
+  padding: 0.1em;
+}
+.nav-link{
+  color: #fff !important;
+  width: 200px;
+  margin-left: 30px;
+  margin-right: 30px;
+
+}
+
+
+
+
+.navbtn-log{
+    position: absolute;
+  right: 50px;
+
+}
+.navbtn-sign{
+    position: absolute;
+  right: 150px;
+
+}
+h1{
+  margin-top: 0.6em;
+}
+
+.doccard{
+  margin-top: 30px
+}
+
+.docp{
+  margin-bottom: -0.8px
+
+}
+
+.dr-container{
+    margin: 3%;
+}
+.about-dr{
+  margin: 1%;
+}
+
+
+/* footer css */
+.footer {
+  height: auto;
+
+  background: #4E4C62;
+  color: white;
+}
+
+.links {
+  ul {
+    list-style-type: none;
+  }
+
+  li a {
+    color: white ;
+    transition: color .2s;
+
+    &:hover {
+      text-decoration: none;
+      color: #fff;
+    }
+  }
+}
+
+.location i{
+    font-size: 15px;
+}
+
+.copyright p {
+  border-top: 1px solid rgba(255, 255, 255, .1);
+}

@@ -1,0 +1,66 @@
+body{
+  font-family: 'Manrope', sans-serif !important;
+}
+
+.navbar-light .navbar-brand{
+  color: #fff;
+
+}
+.navbar-brand{
+  margin-left: 1em;
+}
+.nav-item{
+  padding: 0.1em;
+}
+.nav-link{
+  color: #fff !important;
+  width: 200px;
+  margin-left: 30px;
+  margin-right: 30px;
+
+}
+
+
+
+
+.navbtn-log{
+    position: absolute;
+  right: 50px;
+  
+}
+.navbtn-sign{
+    position: absolute;
+  right: 150px;
+  
+}
+
+.main h1{
+    text-align: center;
+}
+.main{
+    height: 60vh;
+    padding: 2%;
+}
+.footer {
+  height: 400px;
+  background: #4E4C62;
+  color: white;
+}
+.container{
+  
+  height: 400px;
+}
+
+.copyright p {
+  border-top: 1px solid rgba(255, 255, 255, .1);
+}
+
+@media (max-width:700px) {
+
+  .footer {
+    height: 850px;
+    background: #4E4C62;
+    color: white;
+  }
+
+}

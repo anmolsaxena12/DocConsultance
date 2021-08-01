@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width = device-width, initial-scale= 1.0">
+  <title>Doctor Consultancy</title>
+  <!-- remixicon cdn-->
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+  <!-- bootstrap cdn -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+  <!-- custom stylesheet -->
+
+  <!-- googlefont api -->
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/home.css">
+</head>
+
+<body>
+  <!-- navbar -->
+  <nav class="navbar navbar-expand-lg navbar-light " style="background-color:rgba(10,150,108); ">
+    <a class="navbar-brand" href="home.html">DocConsultance</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item ">
+          <a class="nav-link" href="/register">Search nearby doctors</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/register">Book appointment</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="https://console.dialogflow.com/api-client/demo/embedded/9883019c-1150-4d8b-82a1-fdfab6ec486d">Chat with bot</a>
+        </li>
+        <!-- <button type="button" class="btn btn-light navbtn-sign">Sign up</button>
+                <button type="button" class="btn btn-outline-light navbtn-log">Log in</button> -->
+        <a class="btn btn-light navbtn-sign doclog" href="/doctorlogin" role="button">Log in as doctor</a>
+        <a class="btn btn-light navbtn-sign" href="/register" role="button">Register</a>
+        <a class="btn btn-outline-light navbtn-log" href="/login" role="button">Log in</a>
+
+      </ul>
+    </div>
+  </nav>
+
+
+  <!-- carousel -->
+  <div id="carouselExampleControls" class="carousel slide" data-ride="carousel" data-interval="60000">
+    <ol class="carousel-indicators">
+      <!--
+   <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+   <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+   <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+   <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+-->
+    </ol>
+    <div class="carousel-inner" id="carouselExampleControl">
+      <div class="carousel-item active" style="padding:3%; padding-left: 10%;">
+        <div class="row">
+          <div class="col-lg-6">
+            <h2 class="carh2">One place for your healthcare</h2>
+            <p class="carp">Simple registration opens doors to multiple health care providers, schedule appointment and get help regarding your health queries and get expert advice,
+              consult a doctor online on your medical condition via phone or get video consultation from certified doctors from the comfort of your place.
+            </p>
+            <!-- <button class="carbtn btn btn-light">Register Now</button> -->
+            <a class="carbtn btn btn-light" href="/register" role="button">Register Now</a>
+          </div>
+          <div class="col-lg-6 col-sm-12">
+
+            <img src='https://i.postimg.cc/GmGZx6J3/Untitled-1.png' border='0' alt='all in one' class="carimg">
+          </div>
+
+        </div>
+      </div>
+
+
+
+      <div class="carousel-item">
+        <div class="row" style="padding:3%; padding-left: 10% ;">
+          <div class="col-lg-6">
+            <h2 class="carh2">Find doctors nearby</h2>
+            <p class="carp">Your time is precious and thus we allow you to access nearby healthcare services in your vicinity for a hassle free treatment and diagonsis. Search doctors near you in just a few easy steps and get consulted by best
+              doctors around you.
+            </p>
+
+          </div>
+          <div class="col-lg-6" style="padding-right: 10%;">
+
+            <img src='https://i.postimg.cc/8CbzVcJh/img1.png' border='0' alt='vc-dr' width="350" height="280" class="carimg" />
+          </div>
+        </div>
+      </div>
+
+
+      <div class="carousel-item">
+        <div class="row" style="padding:3%; padding-left: 10%;">
+          <div class="col-lg-6">
+            <h2 class="carh2">Book appointments online</h2>
+            <p class="carp">Book appointments from the comfort of your home. Just by opening our website on your computer/laptop or even your mobile phones.Booking appointment is now at the ease of your fingertips. Just select preferred time slot to
+              book an in-clinic or video consultation appointment.
+            </p>
+
+          </div>
+          <div class="col-lg-6" style="padding-right: 10%;">
+
+            <img src='https://i.postimg.cc/BvN4Vzkp/img2.png' border='0' alt='appointment' class="carimg" />
+          </div>
+        </div>
+      </div>
+
+
+      <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div>
+
+    <!-- appointment -->
+    <section id="app">
+
+      <div class="row">
+        <div class="col-lg-12">
+          <h1>Book an appointment</h1>
+          <p class="apara">Book appointment virtaully and get hassle free treatment by locating best diagonistic centres around to save wait and travel time.Tell us your health concern and get assigned top doctors who are ready to treat you with your
+            issues through proper prescriptions and referrals. </p>
+          <!-- <button type="button" class="btn btn-primary btn-lg docbtn" style="background-color:#0a966c; border: none;">Book an appointment</button> -->
+          <a class="btn btn-primary btn-lg docbtn" href="/register" style="background-color:#0a966c; border: none;" role="button">Book an appointment</a>
+        </div>
+      </div>
+
+    </section>
+
+    <section id="docvc">
+      <div class="row">
+        <div class="col-lg-6 col-md-12 docleft">
+          <img src="/images/vcdoc.jpg" alt="doctor Video Call image" class="docimg">
+          </div>
+        <div class="col-lg-6 col-md-12 docright">
+          <h2>Talk to Doctors through video call and chat</h2>
+          <p class="docp">Find experienced doctors across all specialities and access top doctors for online consultations from anywhere, anytime through video/phone call or via chat.</p>
+          <a class="btn btn-primary btn-lg docbtn" href="/register" style="background-color:#e84a5f; border: none;" role="button">View nearby doctors</a>
+          <br><hr>
+          <h6>(Coming Soon...)</h6>
+        </div>
+      </div>
+
+    </section>
+
+    <section id="services">
+      <h1 class="servh">Our services</h1>
+      <div class="row">
+        <div class="col-lg-6 services">
+          <i class="ri-dossier-line  " style="color:red ; font-size:46px ;"></i>
+          <h5>Quick treatment solutions for mild illness through bot</h5>
+
+        </div>
+        <div class="col-lg-6 services">
+          <i class="ri-calendar-check-line " style="color:blue ; font-size:46px ;"></i>
+          <h5>Easy appointment booking possible</h5>
+
+        </div>
+        <div class="col-lg-6 services">
+          <i class="ri-stethoscope-line " style="color:green; font-size:46px ;"></i>
+          <h5>Expert doctors for your consultance</h5>
+
+        </div>
+        <div class="col-lg-6 services">
+          <i class="ri-live-fill  " style="color:#F0E100 ; font-size:46px ;"></i>
+          <h5>Video consultance from doctor</h5>
+        </div>
+
+
+      </div>
+    </section>
+
+
+    <div class=" reg">
+      <div class="signup-form">
+        <img src="/images/doctors.jpg" class="center drs" alt="">
+       <h2 style="text-align: center;">Create an account</h2>
+        <div class="form-group">
+          <button type="submit" class="btn btn-success btn-lg fbtn" href="/register">Register Now</button>
+        </div>
+        <div class="text-center">Already have an account? <a href="/login">Sign in</a></div>
+      </div>
+
+    </div>
+
+
+    <!-- footer -->
+    <div class="mt-5 pt-5 pb-5 footer">
+      <div class="container ">
+        <div class="row">
+          <div class="col-lg-5 col-xs-12 about-company">
+            <h2>DocConsultance</h2>
+            <p class="pr-5 text-white-50">One place for your consultancy</p>
+          </div>
+          <div class="col-lg-3 col-xs-12 links">
+            <h4 class="mt-lg-0 mt-sm-3">Quick Links</h4>
+            <ul class="m-0 p-0">
+              <li> <a href="#" style="color: white ;">Join as doctor</a></li>
+              <li> <a href="#" style="color: white ;">View nearby doctors</a></li>
+              <li> <a href="#" style="color: white ;">Frequently asked questions</a></li>
+              <li> <a href="#" style="color: white ;">Contact us</a></li>
+              <li> <a href="#" style="color: white ;">About us</a></li>
+            </ul>
+          </div>
+          <div class="col-lg-4 col-xs-12 location">
+            <h4 class="mt-lg-0 mt-sm-4">Location</h4>
+            <p>Bhopal, Madhya Pradesh<br> India</p>
+            <p class="mb-0">(+91) 8109814987</p>
+            <p>support.healthcare@gmail.com</p>
+          </div>
+        </div>
+        <div class="row mt-5">
+          <div class="col copyright">
+            <p class=""><small class="text-white-50">© 2020. All Rights Reserved.</small></p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--        chatbot-->
+    <script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1"></script>
+    <df-messenger intent="WELCOME" chat-title="Medical-Chatbot" agent-id="9883019c-1150-4d8b-82a1-fdfab6ec486d" language-code="en"></df-messenger>
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+
+</body>
+
+</html>
