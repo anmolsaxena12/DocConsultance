@@ -54,6 +54,16 @@
         <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" name="search">
         <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
       </form>
+      <form id="tableForm" action="/city" method="post">
+        <select class="selectpicker dd" data-style="btn-info" name="selectpicker" onchange="this.form.submit()">
+        <!-- <optgroup label="Select City" selected = "selected"> -->
+        <option value="Bhopal" selected="selected">Select City</option>
+        <option name="city1" value="Bhopal">Bhopal</option>
+        <option name="city2" value="Indore">Indore</option>
+        <option name="city3" value="Jabalpur">Jabalpur</option>
+        <option name="city4" value="Pune">Pune</option>
+        </select>
+      </form>
     </nav>
 
     <% newListItems.forEach(function(item){ %>

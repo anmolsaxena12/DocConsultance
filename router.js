@@ -46,8 +46,8 @@ app.get("/", function (req, res) {
         console.log(err);
       } else {
         if (foundUser) {
-          console.log(foundUser.password);
-          console.log(password);
+          // console.log(foundUser.password);
+          // console.log(password);
   
           if (await bcrypt.compare(password, foundUser.password)) {
             aemail = email;
@@ -67,11 +67,12 @@ app.get("/", function (req, res) {
               }
             });
           } else {
-            req.flash("error", "incorrect password");
+            // req.flash("error", "incorrect password");
+            res.send('<script>alert("Incorrect Password!")</script>');
             res.redirect("/login");
           }
         } else {
-          req.flash("error", "incorrect credentials");
+          res.send('<script>alert("Invalid Credentials!")</script>');
           res.redirect("/login");
         }
       }
